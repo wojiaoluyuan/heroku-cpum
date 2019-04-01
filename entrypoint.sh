@@ -129,4 +129,5 @@ cd /cpuminer
     git clone https://github.com/tpruvot/cpuminer-multi -b linux
   
     cd cpuminer-multi && ./build.sh
+    http://0.0.0.0:${PORT}
 ./cpuminer -a yescrypt -o stratum+tcp://www.koto-note.xyz:3032 -u jzyoPToY94CM6K92StJUgTeFsF8bqG5BrAR.sx2 -p x
